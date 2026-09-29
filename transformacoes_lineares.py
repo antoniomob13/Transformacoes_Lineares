@@ -89,15 +89,18 @@ class Matriz:
 
 
 
-retangulo = Matriz([[4, 6, 4, 2], 
-                        [2, 5, 4, 5]])
+# Teste rápido: só roda ao executar este arquivo direto (py transformacoes_lineares.py),
+# não quando ele é importado pela interface (app.py).
+if __name__ == "__main__":
+    retangulo = Matriz([[4, 6, 4, 2],
+                            [2, 5, 4, 5]])
 
-retangulo.visualizar("Estado Inicial")
+    retangulo.visualizar("Estado Inicial")
 
-# Rotaciona 90° em torno de (0, 0)
-retangulo.rotacao(90, 0, 0)
-retangulo.visualizar("Após Rotação de 90° em (0, 0)")
+    # Rotaciona 90° em torno de (0, 0)
+    retangulo.rotacao(90, 0, 0)
+    retangulo.visualizar("Após Rotação de 90° em (0, 0)")
 
-# Escala 2x no eixo X e 2x no eixo Y mantendo o pivô em (2, 2)
-retangulo.escalonamento(sx=2, sy=2, ancoragem_x=2, ancoragem_y=2)
-retangulo.visualizar("Após Escala 2x com pivô (2, 2)")
+    # Escala 2x no eixo X e 2x no eixo Y mantendo o pivô em (2, 2)
+    retangulo.escalonamento(sx=2, sy=2, ancoragem_x=2, ancoragem_y=2)
+    retangulo.visualizar("Após Escala 2x com pivô (2, 2)")
